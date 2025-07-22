@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "hamster"
+version = "0.1.1"
+description = "Hamster in a wheel"
+authors = [
+    "Anonymous <anonymous@anonymous.com>",
+]
+license = "Apache 2.0"
+readme = "README.md"
+packages = [
+    { include="hamster", from="src" }
+]
+
+[tool.poetry.dependencies]
+python = "~3.11"
+pandas = "^2.2.3"
+requests = "^2.32.3"
+toml = "^0.10.2"
+repo = "^0.3.0"
+rich = "14.0.0"
+cldk = {git = "git@github.com:codellm-devkit/python-sdk.git", branch = "callsite-argexpr-update"}
+ray = "^2.46.0"
+typer = "^0.15.4"
+pydantic = "^2.11.0"
+tree-sitter = "^0.24.0"
+tree-sitter-java = "^0.23.5"
+matplotlib = "^3.10.3"
+poetry-core = "^2.1.3"
+seaborn = "^0.13.2"
+upsetplot = "^0.9.0"
+tqdm = "^4.67.1"
+
+[tool.poetry.scripts]
+hamster = "hamster.cli:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
