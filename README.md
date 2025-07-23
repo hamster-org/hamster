@@ -13,13 +13,29 @@ Finally, based on the insights gained from the study, we identify promising rese
 We hope that this work can set the stage for new advances in the field and bring ATG tools closer to generating the types of tests developers write.
 
 ### 👋 Overview
-
+First perform ```poetry install``` and then do ```poetry shell```.
 ### 💽 Usage
 
 1. Download GitHub repositories
 2. Run CLDK and generate code analysis
+Run [CLDK Generation](generate_repo_analysis/generate_repo_analysis.py) code by providing the dataset path where all the downloaded repos are stored and the path where the ```analysis.json``` files will be stored.
 3. Generate Hamster model
+Change the `example` by the name of the folder,
+```angular2html
+# Put your repo path and replace "example" here
+repos_dir = root / "example" / "repos"
+analysis_dir = root / "example" / "analysis"
+model_dir = root / "example" / "hamster_results" / "model"
+src_dir = root / "hamster" / "src"
+```
+```angular2html
+python script/generate_model.py
+```
+If you have several projects, you can use the ```ray``` version of the code.
 4. Generate dataset statistics
+```angular2html
+python script/generate_statistics.py
+```
 
 
 ### ℹ️ FAQs:
