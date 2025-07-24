@@ -18,7 +18,7 @@ requests = "^2.32.3"
 toml = "^0.10.2"
 repo = "^0.3.0"
 rich = "14.0.0"
-cldk = {git = "git@github.com:codellm-devkit/python-sdk.git", branch = "callsite-argexpr-update"}
+cldk = {git = "git@github.com:codellm-devkit/python-sdk.git", branch = "main"}
 ray = "^2.46.0"
 typer = "^0.15.4"
 pydantic = "^2.11.0"
